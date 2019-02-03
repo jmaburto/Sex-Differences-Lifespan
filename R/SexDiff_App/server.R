@@ -1,5 +1,6 @@
 
-#setwd("C:/Users/jmaburto/Documents/GitHub/Sex-Differences-Lifespan-Equality/Big picture project/R/SexDiff_App/")
+setwd("C:/Users/jmaburto/Documents/GitHub/Sex-Differences-Lifespan/R/SexDiff_App/")
+
 library(shiny)
 library(ggplot2)
 library(DT)
@@ -311,7 +312,7 @@ shinyServer(
       
       Data$year <- as.factor(Data$year)
       
-      Sx.T <- c(Data[,sum(eo), by = list(year)]$V1)
+      Sx.T <- c(Data[,sum(ed), by = list(year)]$V1)
       
       
       Data$year <- as.factor(Data$year)

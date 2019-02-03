@@ -1,6 +1,6 @@
 library(rsconnect)
 
-setwd("C:/Users/jmaburto/Documents/GitHub/Sex-Differences-Lifespan-Equality/Big picture project/R/SexDiff_App/")
+setwd("C:/Users/jmaburto/Documents/GitHub/Sex-Differences-Lifespan/R/SexDiff_App/")
 
 rsconnect::setAccountInfo(name='population-health',
                           token='D7E026818B6A1E89694B76F6542F5716',
