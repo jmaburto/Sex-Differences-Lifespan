@@ -1,0 +1,10 @@
+name: sexdiff_app
+title:
+username:
+account: population-health
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 684360
+bundleId: 1853556
+url: https://population-health.shinyapps.io/sexdiff_app/
+when: 1549227103.65154
