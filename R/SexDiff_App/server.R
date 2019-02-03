@@ -1,5 +1,5 @@
 
-setwd("C:/Users/jmaburto/Documents/GitHub/Sex-Differences-Lifespan/R/SexDiff_App/")
+#setwd("C:/Users/jmaburto/Documents/GitHub/Sex-Differences-Lifespan/R/SexDiff_App/")
 
 library(shiny)
 library(ggplot2)
