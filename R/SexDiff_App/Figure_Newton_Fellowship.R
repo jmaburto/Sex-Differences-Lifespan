@@ -15,12 +15,13 @@ Data[Data$Sex2 == 'f',]$Sex2 <- 'Females'
 Data[Data$Sex2 == 'm',]$Sex2 <- 'Males'
 unique(Data$PopName)
 #Data <- Data[Data$PopName %in% c("GBRCENW","GBR_SCO") & Data$Age == 0,]
-Data <- Data[Data$PopName %in% c("GBRCENW") & Data$Age == 0,]
+Data <- Data[Data$PopName %in% c("AUT") & Data$Age == 0,]
 
 
 
 r <-ggplot(Data, aes(x = ex,y = ed)) +
-  ggtitle('C Life expectancy at birth vs lifespan inequality') +
+  ggtitle('Fig 3. Life expectancy vs lifespan inequality ',subtitle = 'Austria 1947-2017') +
+  
   geom_point(aes(group = Sex2,colour=Sex2), size= 1.2) +
   theme_light()+
   labs(x = "Life expectancy", y = "Lifespan inequality")+
@@ -60,4 +61,9 @@ require(gridExtra)
 pdf(file="Fig_UK.pdf",width=10,height=5,pointsize=4,useDingbats = F)
 grid.arrange(p,q,r,layout_matrix = rbind(c(1,3),c(2,3)))
 dev.off()
+
+pdf(file="Fig_AUT.pdf",width=5,height=5,pointsize=4,useDingbats = F)
+r
+dev.off()
+
 

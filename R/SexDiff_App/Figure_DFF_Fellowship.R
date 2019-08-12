@@ -1,4 +1,4 @@
-setwd("C:/Users/jmaburto/Documents/GitHub/Sex-Differences-Lifespan/R/SexDiff_App/")
+setwd("C:/Users/jmaburto.SAM/Documents/GitHub/Sex-Differences-Lifespan/R/SexDiff_App/")
 
 library(ggplot2)
 library(data.table)
@@ -15,8 +15,8 @@ Data[Data$Sex2 == 'f',]$Sex2 <- 'Females'
 Data[Data$Sex2 == 'm',]$Sex2 <- 'Males'
 unique(Data$PopName)
 #Data <- Data[Data$PopName %in% c("GBRCENW","GBR_SCO") & Data$Age == 0,]
-Data <- Data[Data$PopName %in% c("DNK") & Data$Age == 0,]
-
+Data <- Data[Data$PopName %in% c("USA") & Data$Age == 0,]
+unique(Data$Year)
 
 
 r <-ggplot(Data, aes(x = ex,y = ed)) +
@@ -57,7 +57,7 @@ q <-ggplot(Data, aes(x = Year,y = ed)) +
 q
 
 require(gridExtra)
-pdf(file="Fig_DK.pdf",width=10,height=5,pointsize=4,useDingbats = F)
+pdf(file="Fig_USA.pdf",width=10,height=5,pointsize=4,useDingbats = F)
 grid.arrange(p,q,r,layout_matrix = rbind(c(1,3),c(2,3)))
 dev.off()
 
